@@ -1,186 +1,45 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="ORN Technologies delivers Microsoft 365, SharePoint, Power Platform, Power BI and AI business solutions in South Africa." />
-  <meta name="theme-color" content="#0b1f3a" />
-  <title>ORN Technologies | Microsoft 365, Power Platform & AI Solutions</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ORN Technologies builds Microsoft 365, Power Platform and AI solutions for modern organisations.">
+  <title>ORN Technologies | Innovate. Automate. Elevate.</title>
+  <style>
+    :root{--ink:#06152d;--navy:#071f47;--blue:#087cd8;--sky:#38bdf8;--orange:#ff6b00;--peach:#fff2e8;--white:#fff;--mist:#f4f7fb;--line:#dce5f0;--muted:#64748b;--shadow:0 28px 80px rgba(6,21,45,.14)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .topline{background:var(--ink);color:#c8d5e7;font-size:12px}.topline .wrap{height:38px;display:flex;align-items:center;justify-content:space-between}.topline b{color:#ff9a52}.nav{height:80px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(220,229,240,.8)}.brand{display:flex;align-items:center;gap:12px;font-size:25px;font-weight:900;letter-spacing:-.05em}.brandmark{width:42px;height:42px;border-radius:13px;background:conic-gradient(from 210deg,var(--blue),var(--navy),var(--orange),var(--orange),var(--blue));display:grid;place-items:center;color:white;box-shadow:0 10px 25px rgba(8,124,216,.25)}.brand small{display:block;font-size:8px;letter-spacing:.28em;color:var(--muted);line-height:1}.brand em{font-style:normal;color:var(--orange)}.links{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:750}.links a:hover{color:var(--orange)}.navcta{padding:13px 18px;background:var(--ink);color:#fff!important;border-radius:12px}.navcta span{color:#ff8a3d;margin-left:12px}.menubtn{display:none;border:0;background:none;font-size:25px}
+    .hero{min-height:720px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:60px;padding:78px 0 90px;position:relative}.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(8,124,216,.13),transparent 68%);right:-80px;top:25px;z-index:-1}.eyebrow{display:inline-flex;gap:10px;align-items:center;font-size:11px;letter-spacing:.18em;font-weight:900;color:var(--blue)}.eyebrow i{width:24px;height:2px;background:var(--orange)}h1{font-size:clamp(50px,6.6vw,88px);line-height:.94;letter-spacing:-.065em;margin:24px 0;color:var(--ink)}h1 span{display:block;color:var(--blue)}h1 em{font-style:normal;color:var(--orange)}.lead{font-size:19px;color:var(--muted);max-width:650px}.actions{display:flex;gap:12px;margin:32px 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:22px;padding:16px 22px;border-radius:12px;border:0;font-weight:850;cursor:pointer}.primary{background:linear-gradient(135deg,var(--orange),#ff8b3d);color:#fff;box-shadow:0 16px 35px rgba(255,107,0,.24)}.primary:hover{transform:translateY(-2px)}.secondary{background:#fff;border:1px solid var(--line);color:var(--ink)}.microtrust{display:flex;align-items:center;gap:22px;padding-top:24px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.microtrust b{color:var(--ink)}
+    .heroart{position:relative;height:550px;display:grid;place-items:center}.glow{position:absolute;inset:65px;border-radius:44px;background:linear-gradient(145deg,var(--ink),#0d3268);transform:rotate(5deg);box-shadow:var(--shadow)}.dash{position:relative;width:92%;padding:24px;border-radius:27px;background:rgba(255,255,255,.96);box-shadow:0 35px 90px rgba(6,21,45,.22);border:1px solid #e6edf5}.dashhead{display:flex;justify-content:space-between;align-items:center}.dots{display:flex;gap:6px}.dots i{width:8px;height:8px;border-radius:50%;background:#d8e0ea}.dots i:last-child{background:var(--orange)}.dashhead b{font-size:12px;color:var(--muted)}.dashmain{margin-top:20px;padding:25px;border-radius:19px;background:linear-gradient(135deg,#071f47,#0b4487);color:#fff}.dashmain small{color:#7dd3fc}.dashmain h3{font-size:25px;margin:10px 0}.progress{height:8px;background:rgba(255,255,255,.13);border-radius:20px;overflow:hidden}.progress i{display:block;width:82%;height:100%;background:linear-gradient(90deg,var(--sky),var(--orange))}.dashgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.metric{padding:18px;border-radius:15px;background:var(--mist)}.metric span{font-size:11px;color:var(--muted)}.metric strong{font-size:25px;display:block}.metric.orange{background:var(--peach)}.floatcard{position:absolute;background:white;border:1px solid var(--line);border-radius:14px;padding:13px 17px;box-shadow:0 15px 40px rgba(6,21,45,.14);font-size:12px}.floatcard b{display:block}.floatcard:before{content:"✓";float:left;margin-right:10px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#eaf9f1;color:#12945d}.fc1{left:-10px;top:78px}.fc2{right:-10px;bottom:58px}
+    .trusted{background:var(--ink);color:#fff;padding:25px 0}.trusted .wrap{display:grid;grid-template-columns:1.2fr repeat(4,1fr);align-items:center;gap:18px}.trusted p{margin:0;color:#9fb0c6;font-size:13px}.trusted b{text-align:center;font-size:13px;padding:10px;border-left:1px solid rgba(255,255,255,.12)}
+    .section{padding:110px 0}.sectionhead{display:grid;grid-template-columns:.4fr 1.15fr .7fr;gap:35px;align-items:start;margin-bottom:52px}.label{font-size:11px;letter-spacing:.18em;color:var(--orange);font-weight:900}.sectionhead h2{font-size:clamp(40px,5vw,65px);line-height:1.02;letter-spacing:-.05em;margin:0}.sectionhead h2 span{color:var(--blue)}.sectionhead p{margin:7px 0;color:var(--muted)}
+    .services{background:var(--mist)}.servicegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.service{background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px;min-height:330px;display:flex;flex-direction:column;transition:.25s}.service:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:#b8d9f3}.icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:21px;background:#eaf6ff;color:var(--blue)}.service:nth-child(2) .icon,.service:nth-child(4) .icon{background:var(--peach);color:var(--orange)}.service h3{font-size:22px;margin:26px 0 12px}.service p{font-size:14px;color:var(--muted)}.service a{margin-top:auto;font-size:12px;font-weight:900;color:var(--blue)}
+    .solutions{background:var(--ink);color:#fff;overflow:hidden}.solutions .sectionhead h2{color:#fff}.solutions .sectionhead h2 span{color:#ff8a3d}.solutions .sectionhead p{color:#9fb0c6}.productgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product{border:1px solid rgba(255,255,255,.13);border-radius:22px;padding:28px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));min-height:390px;display:flex;flex-direction:column;position:relative;overflow:hidden}.product:after{content:"";width:150px;height:150px;border-radius:50%;position:absolute;right:-75px;top:-75px;background:var(--blue);filter:blur(20px);opacity:.18}.product:nth-child(2n):after{background:var(--orange)}.productcode{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;color:#7dd3fc}.productcode b{font-size:18px;color:#ff8a3d}.product h3{font-size:28px;margin:52px 0 8px}.product>p{font-size:14px;color:#aebdd0}.product ul{list-style:none;padding:0;font-size:13px;color:#d3ddeb}.product li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)}.product li:before{content:"•";color:var(--orange);margin-right:9px}.product a{margin-top:auto;color:#ff9b59;font-weight:850;font-size:12px}
+    .whygrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center}.quote{background:linear-gradient(145deg,var(--blue),#09366a);border-radius:30px;padding:45px;color:#fff;min-height:480px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow)}.quote span{font-size:60px;line-height:1;color:#ff9b59}.quote h3{font-size:33px;line-height:1.15;margin:0}.quote p{color:#c6d9eb}.quote small{letter-spacing:.14em}.reasons h2{font-size:clamp(38px,4.7vw,61px);line-height:1.02;letter-spacing:-.05em;margin:15px 0 30px}.reason{display:grid;grid-template-columns:42px 1fr;gap:15px;padding:18px 0;border-top:1px solid var(--line)}.reason b:first-child{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--peach);color:var(--orange)}.reason h4{margin:0}.reason p{margin:3px 0;color:var(--muted);font-size:13px}
+    .process{background:var(--mist)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.step{background:#fff;padding:32px;min-height:250px}.step b{font-size:12px;color:var(--orange)}.step h3{font-size:24px;margin:48px 0 8px}.step p{font-size:13px;color:var(--muted)}
+    .contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}.contactcopy h2{font-size:clamp(42px,5vw,66px);line-height:1.01;letter-spacing:-.055em;margin:16px 0 24px}.contactcopy h2 span{color:var(--orange)}.contactcopy>p{color:var(--muted)}.details{display:flex;flex-direction:column;gap:10px;margin-top:30px;font-size:14px}.details a{color:var(--blue);font-weight:850}.contact form{display:grid;grid-template-columns:1fr 1fr;gap:15px;background:var(--mist);border:1px solid var(--line);border-radius:24px;padding:30px}.field{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}.field label{font-size:11px;font-weight:850}.field input,.field select,.field textarea{border:1px solid var(--line);border-radius:11px;padding:13px;background:#fff;outline:0;color:var(--ink)}.field textarea{height:115px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(8,124,216,.1)}.privacy{font-size:11px;color:var(--muted);margin:0}.status{display:none;color:#138655;font-size:13px;font-weight:800}
+    footer{background:#041025;color:#fff;padding:54px 0 25px}.footergrid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px}.footerbrand p{color:#8fa2bb;font-size:13px;max-width:270px}footer h4{font-size:13px}footer a,footer p{display:block;color:#9fb0c6;font-size:12px;margin:8px 0}.copyright{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;margin-top:35px;color:#7186a2;font-size:11px;display:flex;justify-content:space-between}
+    .chatbutton{position:fixed;right:22px;bottom:22px;border:0;border-radius:999px;background:linear-gradient(135deg,var(--orange),#ff8e43);color:#fff;padding:14px 18px;font-weight:900;box-shadow:0 18px 40px rgba(255,107,0,.3);z-index:120;cursor:pointer}.chatpanel{position:fixed;right:22px;bottom:82px;width:min(380px,calc(100vw - 30px));height:520px;max-height:70vh;background:#fff;border-radius:22px;box-shadow:0 30px 90px rgba(6,21,45,.3);z-index:119;display:none;flex-direction:column;overflow:hidden;border:1px solid var(--line)}.chatpanel.open{display:flex}.chathead{padding:17px;background:var(--ink);color:#fff;display:flex;justify-content:space-between}.chathead span{display:block;font-size:10px;color:#6ee7b7}.chathead button{background:none;border:0;color:white;font-size:20px}.chatbody{flex:1;overflow:auto;background:var(--mist);padding:15px}.msg{padding:10px 12px;border-radius:13px;max-width:86%;font-size:13px;margin:8px 0}.bot{background:#fff;border:1px solid var(--line)}.user{background:var(--blue);color:#fff;margin-left:auto}.quick{display:flex;gap:6px;padding:8px 12px}.quick button{border:1px solid var(--line);background:#fff;border-radius:20px;padding:7px 9px;font-size:11px;color:var(--blue)}.chatinput{display:flex;padding:11px;border-top:1px solid var(--line)}.chatinput input{flex:1;border:0;outline:0}.chatinput button{border:0;width:38px;height:38px;border-radius:10px;background:var(--orange);color:white}
+    @media(max-width:1000px){.hero{grid-template-columns:1fr}.heroart{max-width:650px;margin:auto;width:100%}.sectionhead{grid-template-columns:1fr}.servicegrid{grid-template-columns:1fr 1fr}.productgrid{grid-template-columns:1fr 1fr}.whygrid,.contact{grid-template-columns:1fr}.trusted .wrap{grid-template-columns:1fr 1fr}.trusted p{grid-column:1/-1}.steps{grid-template-columns:1fr 1fr}}
+    @media(max-width:720px){.topline{display:none}.nav{height:70px}.links{display:none;position:absolute;top:70px;left:0;right:0;padding:22px;background:#fff;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}.links.open{display:flex}.menubtn{display:block}.hero{padding:55px 0}.heroart{height:450px}.dash{width:100%}.floatcard{display:none}.actions{flex-direction:column}.microtrust{align-items:flex-start;gap:8px;flex-direction:column}.trusted .wrap,.servicegrid,.productgrid,.steps,.footergrid{grid-template-columns:1fr}.trusted b{border-left:0;border-top:1px solid rgba(255,255,255,.1)}.section{padding:78px 0}.contact form{grid-template-columns:1fr}.full{grid-column:auto}.copyright{gap:10px;flex-direction:column}.chatbutton span{display:none}}
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="ORN Technologies home">
-        <img src="images/logo.svg" alt="ORN Technologies logo" />
-        <span>ORN Technologies</span>
-      </a>
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#industries">Industries</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-small" href="#contact">Book a consultation</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="hero-orb orb-one"></div>
-      <div class="hero-orb orb-two"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <span class="eyebrow">MICROSOFT 365 · POWER PLATFORM · AI</span>
-          <h1>Building smarter businesses through secure digital solutions.</h1>
-          <p>ORN Technologies helps organisations replace manual, paper-heavy processes with modern SharePoint, Power Apps, Power Automate, Power BI and AI solutions.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#contact">Request a consultation</a>
-            <a class="btn btn-ghost" href="#solutions">Explore our solutions</a>
-          </div>
-          <div class="trust-row">
-            <span>Business-first delivery</span>
-            <span>Microsoft ecosystem expertise</span>
-            <span>South Africa</span>
-          </div>
-        </div>
-
-        <div class="hero-panel reveal delay-1" aria-label="ORN digital transformation dashboard illustration">
-          <div class="panel-top">
-            <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
-            <span class="panel-title">ORN Digital Workplace</span>
-          </div>
-          <div class="panel-body">
-            <div class="metric-card"><strong>Automate</strong><span>Approvals, reminders and escalations</span></div>
-            <div class="metric-card"><strong>Manage</strong><span>Documents, records and business data</span></div>
-            <div class="metric-card"><strong>Understand</strong><span>Dashboards and decision-ready insights</span></div>
-            <div class="flow-line"><span>Request</span><i></i><span>Approval</span><i></i><span>Action</span><i></i><span>Report</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">WHAT WE DO</span>
-          <h2>Technology that solves real operational problems.</h2>
-          <p>We design practical solutions around how your teams actually work, then build them using the Microsoft cloud.</p>
-        </div>
-        <div class="card-grid three">
-          <article class="service-card reveal"><div class="icon">M</div><h3>Microsoft 365 Consulting</h3><p>Architecture, governance, collaboration and digital workplace advisory.</p></article>
-          <article class="service-card reveal delay-1"><div class="icon">S</div><h3>SharePoint Solutions</h3><p>Intranets, document management, records management and business portals.</p></article>
-          <article class="service-card reveal delay-2"><div class="icon">P</div><h3>Power Platform</h3><p>Power Apps, Power Automate and Power BI solutions for end-to-end process improvement.</p></article>
-          <article class="service-card reveal"><div class="icon">A</div><h3>AI Automation</h3><p>AI assistants, intelligent content processing and workflow acceleration.</p></article>
-          <article class="service-card reveal delay-1"><div class="icon">D</div><h3>Custom Business Applications</h3><p>Secure applications tailored to your organisation, users and approval rules.</p></article>
-          <article class="service-card reveal delay-2"><div class="icon">I</div><h3>Integration & Reporting</h3><p>Connect systems, reduce duplicate capture and turn data into useful insight.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="solutions">
-      <div class="container">
-        <div class="section-heading light reveal">
-          <span class="eyebrow">FLAGSHIP SOLUTIONS</span>
-          <h2>Reusable products, adapted to your organisation.</h2>
-          <p>Start with a proven foundation and configure the workflow, branding, security and integrations you need.</p>
-        </div>
-        <div class="solution-grid">
-          <article class="solution-card featured reveal">
-            <span class="pill">Flagship</span>
-            <h3>ORN EDRMS</h3>
-            <p>Electronic Document and Records Management for controlled capture, indexing, approvals, search, audit trails, retention and official records.</p>
-            <ul><li>Document registration and metadata</li><li>Approval and assignment workflows</li><li>Audit trail, search and dashboards</li><li>Retention-ready architecture</li></ul>
-            <a href="#contact">Book an EDRMS demo →</a>
-          </article>
-          <article class="solution-card reveal delay-1"><span class="pill">Workflow</span><h3>ORN Travel</h3><p>Travel request, document validation, budget checks, multi-stage approvals and reporting.</p><a href="#contact">Request information →</a></article>
-          <article class="solution-card reveal delay-2"><span class="pill">Operations</span><h3>ORN Backup & Restore</h3><p>Request tracking with manager, business unit and IT approvals, notifications and completion reporting.</p><a href="#contact">Request information →</a></article>
-          <article class="solution-card reveal"><span class="pill">Coming next</span><h3>ORN Contracts</h3><p>Contract lifecycle management, key dates, obligations, renewals and document control.</p><a href="#contact">Join the interest list →</a></article>
-          <article class="solution-card reveal delay-1"><span class="pill">Coming next</span><h3>ORN Assets</h3><p>Asset register, allocation, movement, maintenance, verification and reporting.</p><a href="#contact">Join the interest list →</a></article>
-          <article class="solution-card reveal delay-2"><span class="pill">Coming next</span><h3>ORN HelpDesk</h3><p>Service requests, prioritisation, assignment, SLA monitoring and knowledge management.</p><a href="#contact">Join the interest list →</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="industries">
-      <div class="container split">
-        <div class="section-heading reveal">
-          <span class="eyebrow">INDUSTRIES</span>
-          <h2>Designed for organisations with complex processes.</h2>
-          <p>Our solutions are especially suited to environments where governance, traceability, security and service delivery matter.</p>
-        </div>
-        <div class="industry-list reveal delay-1">
-          <span>Government</span><span>Municipalities</span><span>Universities</span><span>Healthcare</span><span>Property</span><span>Engineering</span><span>Financial Services</span><span>Legal Firms</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="about">
-      <div class="container about-grid">
-        <div class="about-card reveal">
-          <span class="eyebrow">WHY ORN</span>
-          <h2>Small enough to care. Skilled enough to deliver.</h2>
-          <p>ORN Technologies combines deep hands-on Microsoft solution experience with a practical business-first approach. We focus on solutions that users can adopt, administrators can support and leaders can measure.</p>
-          <div class="check-grid"><span>✓ Secure cloud solutions</span><span>✓ Fast, iterative delivery</span><span>✓ Clear documentation</span><span>✓ Ongoing improvement</span></div>
-        </div>
-        <div class="process reveal delay-1">
-          <div><b>01</b><span><strong>Discover</strong><small>Understand the problem, users and outcomes.</small></span></div>
-          <div><b>02</b><span><strong>Design</strong><small>Map the process, data, security and experience.</small></span></div>
-          <div><b>03</b><span><strong>Build & Test</strong><small>Deliver iteratively and validate with real users.</small></span></div>
-          <div><b>04</b><span><strong>Launch & Improve</strong><small>Train, support and continuously enhance.</small></span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-copy reveal">
-          <span class="eyebrow">LET'S TALK</span>
-          <h2>Tell us what you want to improve.</h2>
-          <p>Share your challenge and we will respond with the right next step—whether that is a discovery call, product demonstration or solution proposal.</p>
-          <div class="contact-details">
-            <a href="mailto:info@orntechnologies.co.za">info@orntechnologies.co.za</a>
-            <span>Johannesburg, South Africa</span>
-          </div>
-        </div>
-        <form class="contact-form reveal delay-1" id="contactForm">
-          <label>Full name<input required name="name" autocomplete="name" /></label>
-          <label>Company<input name="company" autocomplete="organization" /></label>
-          <label>Email address<input required type="email" name="email" autocomplete="email" /></label>
-          <label>Solution of interest<select name="interest"><option>General consultation</option><option>ORN EDRMS</option><option>ORN Travel</option><option>ORN Backup & Restore</option><option>Power Platform solution</option><option>SharePoint solution</option><option>AI automation</option></select></label>
-          <label>How can we help?<textarea required name="message" rows="5"></textarea></label>
-          <button class="btn" type="submit">Prepare enquiry email</button>
-          <p class="form-note" id="formNote">This opens your email application with the enquiry pre-filled.</p>
-        </form>
-      </div>
-    </section>
+  <div class="topline"><div class="wrap"><span>Microsoft cloud solutions for modern organisations</span><span><b>Partner Center registered</b> • Johannesburg, South Africa</span></div></div>
+  <nav class="nav"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between"><a class="brand" href="#home"><span class="brandmark">O</span><span>OR<em>N</em><small>TECHNOLOGIES</small></span></a><button class="menubtn" id="menu" aria-label="Open menu">☰</button><div class="links" id="links"><a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#approach">Approach</a><a href="#contact">Contact</a><a class="navcta" href="#contact">Book a consultation <span>↗</span></a></div></div></nav>
+  <main>
+    <section class="hero wrap" id="home"><div><div class="eyebrow"><i></i> INNOVATE • AUTOMATE • ELEVATE</div><h1>Technology that makes <span>business <em>flow.</em></span></h1><p class="lead">ORN Technologies turns complex processes into secure, connected digital solutions using Microsoft 365, Power Platform and AI.</p><div class="actions"><a class="btn primary" href="#contact">Start your project <span>→</span></a><a class="btn secondary" href="#solutions">Explore our solutions</a></div><div class="microtrust"><b>Microsoft ecosystem expertise</b><span>SharePoint</span><span>Power Apps</span><span>Power Automate</span><span>Power BI</span></div></div><div class="heroart"><div class="glow"></div><div class="dash"><div class="dashhead"><div class="dots"><i></i><i></i><i></i></div><b>ORN DIGITAL WORKPLACE</b></div><div class="dashmain"><small>PROCESS PERFORMANCE</small><h3>Your work. Connected.</h3><div class="progress"><i></i></div></div><div class="dashgrid"><div class="metric"><span>Workflow status</span><strong>82%</strong></div><div class="metric orange"><span>Tasks automated</span><strong>24</strong></div></div></div><div class="floatcard fc1"><b>Approval completed</b>Power Automate workflow</div><div class="floatcard fc2"><b>Records secured</b>Governed in Microsoft 365</div></div></section>
+    <section class="trusted"><div class="wrap"><p>One connected Microsoft ecosystem</p><b>Microsoft 365</b><b>Power Platform</b><b>SharePoint Online</b><b>Azure AI</b></div></section>
+    <section class="section services" id="services"><div class="wrap"><div class="sectionhead"><span class="label">WHAT WE DO</span><h2>Smart solutions.<br><span>Real outcomes.</span></h2><p>We begin with the business problem, then design technology that is practical, secure and easy to adopt.</p></div><div class="servicegrid"><article class="service"><div class="icon">◇</div><h3>Microsoft 365</h3><p>Modern collaboration, SharePoint solutions, information governance and secure digital workplaces.</p><a href="#contact">DISCUSS YOUR NEEDS →</a></article><article class="service"><div class="icon">⚡</div><h3>Power Platform</h3><p>Business applications, intelligent workflows, Dataverse and Power BI reporting built around your process.</p><a href="#contact">AUTOMATE A PROCESS →</a></article><article class="service"><div class="icon">✦</div><h3>AI & automation</h3><p>AI assistants, document intelligence and search experiences connected to useful business workflows.</p><a href="#contact">EXPLORE AI →</a></article><article class="service"><div class="icon">◎</div><h3>Advisory & support</h3><p>Solution design, governance, training, adoption and continuous improvement for sustainable results.</p><a href="#contact">TALK TO AN EXPERT →</a></article></div></div></section>
+    <section class="section solutions" id="solutions"><div class="wrap"><div class="sectionhead"><span class="label">ORN SOLUTIONS</span><h2>Built to work.<br><span>Ready to scale.</span></h2><p>Flexible solution foundations tailored to your teams, policies and operating environment.</p></div><div class="productgrid"><article class="product"><div class="productcode"><span>ORN / 01</span><b>↗</b></div><h3>ORN EDRMS</h3><p>Electronic document and records management.</p><ul><li>File plans and metadata</li><li>Scanning and email filing</li><li>Retention and audit trails</li></ul><a href="#contact">REQUEST A DEMONSTRATION →</a></article><article class="product"><div class="productcode"><span>ORN / 02</span><b>↗</b></div><h3>ORN Contracts</h3><p>Complete contract lifecycle and compliance control.</p><ul><li>Central contract register</li><li>Approvals and obligations</li><li>Expiry alerts and reporting</li></ul><a href="#contact">REQUEST A DEMONSTRATION →</a></article><article class="product"><div class="productcode"><span>ORN / 03</span><b>↗</b></div><h3>ORN Travel</h3><p>Digital travel requests and approvals.</p><ul><li>Multi-stage approvals</li><li>Document checklists</li><li>Notifications and dashboards</li></ul><a href="#contact">REQUEST A DEMONSTRATION →</a></article><article class="product"><div class="productcode"><span>ORN / 04</span><b>↗</b></div><h3>ORN Assets</h3><p>Asset registration, allocation and tracking.</p><ul><li>Digital asset register</li><li>Allocation history</li><li>Maintenance reporting</li></ul><a href="#contact">REQUEST A DEMONSTRATION →</a></article><article class="product"><div class="productcode"><span>ORN / 05</span><b>↗</b></div><h3>ORN HR</h3><p>Employee services and HR workflows.</p><ul><li>Leave and overtime</li><li>Claims and approvals</li><li>Management dashboards</li></ul><a href="#contact">REQUEST A DEMONSTRATION →</a></article><article class="product"><div class="productcode"><span>ORN / 06</span><b>↗</b></div><h3>ORN Service Desk</h3><p>Structured support and request management.</p><ul><li>Ticket assignment</li><li>SLA monitoring</li><li>Escalations and knowledge</li></ul><a href="#contact">REQUEST A DEMONSTRATION →</a></article></div></div></section>
+    <section class="section"><div class="wrap whygrid"><div class="quote"><span>“</span><h3>Technology should remove friction, not create more of it.</h3><p>Every ORN solution is shaped around the people who will use it and the outcomes the organisation needs.</p><small>THE ORN APPROACH</small></div><div class="reasons"><span class="label">WHY ORN</span><h2>Enterprise thinking.<br>Practical delivery.</h2><div class="reason"><b>1</b><div><h4>Business-first design</h4><p>We translate operational problems into usable digital solutions.</p></div></div><div class="reason"><b>2</b><div><h4>Secure Microsoft foundations</h4><p>Permissions, governance, auditability and scale are considered from day one.</p></div></div><div class="reason"><b>3</b><div><h4>Built for adoption</h4><p>Clear interfaces, training and support help your solution succeed after launch.</p></div></div><div class="reason"><b>4</b><div><h4>Grow at your pace</h4><p>Start with a focused MVP and expand as value and adoption grow.</p></div></div></div></div></section>
+    <section class="section process" id="approach"><div class="wrap"><div class="sectionhead"><span class="label">HOW WE WORK</span><h2>From challenge<br><span>to change.</span></h2><p>A clear delivery journey keeps stakeholders involved and progress visible.</p></div><div class="steps"><div class="step"><b>01 / DISCOVER</b><h3>Understand</h3><p>People, process, pain points and measures of success.</p></div><div class="step"><b>02 / DESIGN</b><h3>Shape</h3><p>Architecture, user experience and delivery roadmap.</p></div><div class="step"><b>03 / DELIVER</b><h3>Build</h3><p>Focused development, testing and stakeholder feedback.</p></div><div class="step"><b>04 / GROW</b><h3>Improve</h3><p>Launch, training, adoption and continuous enhancement.</p></div></div></div></section>
+    <section class="section" id="contact"><div class="wrap contact"><div class="contactcopy"><span class="label">LET'S TALK</span><h2>What could work <span>better?</span></h2><p>Tell us where the friction is. We will help you identify a practical, high-value starting point.</p><div class="details"><a href="mailto:info@orntechnologies.co.za">info@orntechnologies.co.za</a><span>Johannesburg, South Africa</span><span>Serving organisations across South Africa</span></div></div><form id="contactForm"><div class="field"><label for="name">FULL NAME</label><input id="name" required placeholder="Your name"></div><div class="field"><label for="company">ORGANISATION</label><input id="company" placeholder="Company name"></div><div class="field"><label for="email">WORK EMAIL</label><input id="email" required type="email" placeholder="name@company.co.za"></div><div class="field"><label for="phone">PHONE</label><input id="phone" placeholder="+27"></div><div class="field full"><label for="service">SOLUTION REQUIRED</label><select id="service"><option>Microsoft 365 consulting</option><option>Power Platform automation</option><option>ORN EDRMS</option><option>ORN Contracts</option><option>AI solution</option><option>Other</option></select></div><div class="field full"><label for="message">PROJECT REQUIREMENTS</label><textarea id="message" placeholder="What would you like to improve?"></textarea></div><p class="privacy full">Your details are used only to respond to this enquiry.</p><button class="btn primary full" type="submit">Email ORN Technologies <span>→</span></button><p class="status full" id="status">Your email app has opened. Review the enquiry and press Send.</p></form></div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><a class="brand footer-brand" href="#top"><img src="images/logo.svg" alt="" /><span>ORN Technologies</span></a><p>Building smarter businesses with Microsoft 365, Power Platform and AI.</p></div>
-      <div><h4>Solutions</h4><a href="#solutions">ORN EDRMS</a><a href="#solutions">ORN Travel</a><a href="#solutions">ORN Backup & Restore</a></div>
-      <div><h4>Company</h4><a href="#about">About</a><a href="#contact">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-    </div>
-    <div class="container copyright">© <span id="year"></span> ORN Technologies. All rights reserved.</div>
-  </footer>
-
-  <button class="chat-launcher" id="chatLauncher" aria-label="Open ORN AI Assistant"><span>✦</span></button>
-  <section class="chat-window" id="chatWindow" aria-label="ORN AI Assistant" aria-hidden="true">
-    <header><div><strong>ORN AI Assistant</strong><small>Online</small></div><button id="chatClose" aria-label="Close chat">×</button></header>
-    <div class="chat-messages" id="chatMessages"></div>
-    <div class="quick-actions" id="quickActions"></div>
-    <form class="chat-input" id="chatForm"><input id="chatInput" placeholder="Ask about our solutions…" autocomplete="off" /><button aria-label="Send">➤</button></form>
-  </section>
-
-  <script src="js/main.js"></script>
-  <script src="js/chatbot.js"></script>
-</body>
-</html>
+  <footer><div class="wrap"><div class="footergrid"><div class="footerbrand"><a class="brand" href="#home"><span class="brandmark">O</span><span>OR<em>N</em><small>TECHNOLOGIES</small></span></a><p>Building smarter organisations with Microsoft 365, Power Platform and AI.</p></div><div><h4>SOLUTIONS</h4><a href="#solutions">ORN EDRMS</a><a href="#solutions">ORN Contracts</a><a href="#solutions">ORN Travel</a></div><div><h4>SERVICES</h4><a href="#services">Microsoft 365</a><a href="#services">Power Platform</a><a href="#services">AI & automation</a></div><div><h4>CONTACT</h4><p>Johannesburg, South Africa</p><a href="mailto:info@orntechnologies.co.za">info@orntechnologies.co.za</a></div></div><div class="copyright"><span>© 2026 ORN Technologies. All rights reserved.</span><span>INNOVATE • AUTOMATE • ELEVATE</span></div></div></footer>
+  <button class="chatbutton" id="chatToggle">✦ <span>Ask ORN</span></button><aside class="chatpanel" id="chat"><div class="chathead"><div><b>ORN AI Assistant</b><span>ONLINE • BUSINESS SOLUTIONS</span></div><button id="chatClose">×</button></div><div class="chatbody" id="chatBody"></div><div class="quick"><button data-q="ORN EDRMS">EDRMS</button><button data-q="Power Platform">Power Platform</button><button data-q="Get a quote">Get a quote</button></div><form class="chatinput" id="chatForm"><input id="chatInput" placeholder="Ask a question…"><button>→</button></form></aside>
+  <script>
+    const menu=document.getElementById('menu'),links=document.getElementById('links');menu.onclick=()=>links.classList.toggle('open');links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+    document.getElementById('contactForm').onsubmit=e=>{e.preventDefault();const g=id=>document.getElementById(id).value.trim(),subject=encodeURIComponent('ORN website enquiry - '+(g('company')||g('name'))),body=encodeURIComponent('Name: '+g('name')+'\nCompany: '+g('company')+'\nEmail: '+g('email')+'\nPhone: '+g('phone')+'\nSolution: '+g('service')+'\n\nProject requirements:\n'+g('message'));document.getElementById('status').style.display='block';location.href='mailto:info@orntechnologies.co.za?subject='+subject+'&body='+body};
+    const chat=document.getElementById('chat'),chatBody=document.getElementById('chatBody'),chatInput=document.getElementById('chatInput');function add(text,type='bot'){const p=document.createElement('p');p.className='msg '+type;p.textContent=text;chatBody.appendChild(p);chatBody.scrollTop=chatBody.scrollHeight}function answer(q){add(q,'user');const s=q.toLowerCase();let r='Tell me which business process you want to improve and I will guide you to the right ORN service.';if(s.includes('edrms')||s.includes('record')||s.includes('document'))r='ORN EDRMS manages document capture, metadata, file plans, approvals, audit trails, retention and reporting.';else if(s.includes('power')||s.includes('automat'))r='ORN builds Power Apps, Power Automate workflows, Dataverse solutions and Power BI reporting around your business process.';else if(s.includes('quote')||s.includes('price'))r='Pricing depends on users, integrations and scope. Use the enquiry form for a tailored estimate.';setTimeout(()=>add(r),180)}document.getElementById('chatToggle').onclick=()=>{chat.classList.toggle('open');if(!chatBody.children.length)add('Hello 👋 I’m the ORN AI Assistant. How can I help your organisation work smarter?')};document.getElementById('chatClose').onclick=()=>chat.classList.remove('open');document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>answer(b.dataset.q));document.getElementById('chatForm').onsubmit=e=>{e.preventDefault();if(chatInput.value.trim())answer(chatInput.value.trim());chatInput.value=''};
+  </script>
+</body></html>
