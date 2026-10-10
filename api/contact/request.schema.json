@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ONN Website Enquiry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "email"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 120
+    },
+    "company": {
+      "type": "string",
+      "maxLength": 160
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "maxLength": 254
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 40
+    },
+    "service": {
+      "type": "string",
+      "maxLength": 160
+    },
+    "message": {
+      "type": "string",
+      "maxLength": 5000
+    },
+    "website": {
+      "type": "string",
+      "maxLength": 0
+    }
+  }
+}
