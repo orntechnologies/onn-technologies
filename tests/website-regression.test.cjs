@@ -87,3 +87,7 @@ test('every featured chatbot category quick question has a matching FAQ keyword'
   }
 });
 
+test('updated chatbot script is cache-busted for published visitors', () => {
+  assert.match(html, /<script defer src="\.\/chatbot\.js\?v=20261018-2"><\/script>/);
+});
+
