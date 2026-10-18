@@ -64,3 +64,19 @@ test('mobile chatbot layout and accessible state controls are present', () => {
   assert.match(bot, /launch\.setAttribute\('aria-label',open\?'Close ONN website assistant':'Open ONN website assistant'\)/);
 });
 
+test('branded favicon assets are linked and valid PNG/ICO files', () => {
+  for (const href of [
+    '/favicon.ico?v=20261018', '/favicon-16x16.png?v=20261018',
+    '/favicon-32x32.png?v=20261018', '/apple-touch-icon.png?v=20261018'
+  ]) assert.ok(html.includes(href), `homepage links ${href}`);
+  for (const name of ['favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png']) {
+    const data = fs.readFileSync(path.join(root, name));
+    assert.equal(data.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', `${name} has PNG signature`);
+  }
+  const ico = fs.readFileSync(path.join(root, 'favicon.ico'));
+  assert.equal(ico.readUInt16LE(0), 0);
+  assert.equal(ico.readUInt16LE(2), 1);
+  assert.equal(ico.readUInt16LE(4), 4);
+  const firstFrameOffset = ico.readUInt32LE(18);
+  assert.equal(ico.subarray(firstFrameOffset, firstFrameOffset + 8).toString('hex'), '89504e470d0a1a0a', 'ICO embeds PNG icon frames');
+});
