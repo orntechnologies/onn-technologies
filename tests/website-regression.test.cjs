@@ -80,3 +80,10 @@ test('branded favicon assets are linked and valid PNG/ICO files', () => {
   const firstFrameOffset = ico.readUInt32LE(18);
   assert.equal(ico.subarray(firstFrameOffset, firstFrameOffset + 8).toString('hex'), '89504e470d0a1a0a', 'ICO embeds PNG icon frames');
 });
+
+test('every featured chatbot category quick question has a matching FAQ keyword', () => {
+  for (const phrase of ['website development', 'ai & automation', 'hr & business systems', 'microsoft solutions', 'it consulting']) {
+    assert.match(bot, new RegExp(`keys:\\[[^\\]]*['"]${phrase.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&')}['"]`), `${phrase} is routable to an FAQ`);
+  }
+});
+
