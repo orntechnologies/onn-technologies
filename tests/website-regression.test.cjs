@@ -59,7 +59,7 @@ test('public chatbot covers new categories and has no private ONN AI endpoint', 
 
 test('mobile chatbot layout and accessible state controls are present', () => {
   assert.match(css, /@media\(max-width:560px\)/);
-  assert.match(css, /min-width:58px/);
+  assert.match(css, /min-width:44px/);
   assert.match(html, /menu\.setAttribute\('aria-label', isOpen \? 'Close menu' : 'Open menu'\)/);
   assert.match(bot, /launch\.setAttribute\('aria-label',open\?'Close ONN website assistant':'Open ONN website assistant'\)/);
 });
