@@ -21,3 +21,4 @@
 .onn-chat-launch:focus-visible,.onn-chat-panel button:focus-visible,.onn-chat-panel input:focus-visible,.onn-chat-panel textarea:focus-visible{outline:3px solid #38bdf8;outline-offset:2px}
 @media(max-width:560px){.onn-chat-panel{right:12px;bottom:75px;width:calc(100vw - 24px);height:min(580px,calc(100dvh - 94px))}.onn-chat-launch{right:12px;bottom:12px}}
 @media(prefers-reduced-motion:reduce){.onn-chat-panel,.onn-chat-launch{scroll-behavior:auto}}
+\n.onn-chat-panel [hidden]{display:none!important}\n
