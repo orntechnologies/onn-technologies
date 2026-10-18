@@ -22,6 +22,9 @@ The homepage presents five service categories: Custom Software Development (incl
 - `chatbot.css`: isolated responsive chat layout with ONN colours.
 - `chatbot.js`: FAQ, topic suggestions, consultation form, validation, consent and existing FormSubmit provider integration.
 
+## Automated checks
+Run node --check chatbot.js and node --test tests/website-regression.test.cjs from the repository root.
+
 ## Security and deployment caveats
 The chatbot is not a secure server-side lead-processing service. Consent is checked in the browser; a malicious client could bypass it. FormSubmit is a third-party processor already used by the website. Email delivery, rate limits, CAPTCHA, abuse controls and privacy/legal adequacy require verification before public launch. No new AI API or infrastructure is provisioned.
 
