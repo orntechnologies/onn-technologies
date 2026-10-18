@@ -11,7 +11,8 @@
     {keys:['hr','human resources','leave','employee','recruitment','onboarding'],title:'HR solutions',answer:'ONN Technologies offers HR-focused solutions for recruitment, onboarding, leave, employee records, performance and approval workflows.'},
     {keys:['ai','artificial intelligence','chatbot'],title:'AI solutions',answer:'ONN Technologies explores practical AI-enabled business solutions and intelligent workflow improvements. A consultation helps us assess feasibility, governance and scope.'},
     {keys:['power bi','dashboard','reporting','analytics'],title:'Power BI',answer:'ONN works with Microsoft Power BI to help organisations turn business data into meaningful dashboards and reporting.'},
-    {keys:['price','pricing','cost','quote','consultation','demo','meeting'],title:'Consultation',answer:'Pricing and timelines depend on your requirements. Choose “Request consultation” below to share your needs; ONN Technologies can follow up.'}
+    {keys:['price','pricing','cost','quote','consultation','demo','meeting'],title:'Consultation',answer:'Pricing and timelines depend on your requirements. Choose “Request consultation” below to share your needs; ONN Technologies can follow up.'},
+    {keys:['what services','services offered','what do you do','what does onn do','business solutions'],title:'ONN Technologies services',answer:'ONN Technologies delivers SharePoint and Microsoft 365, Power Apps and Power Automate, Power BI, EDRMS, HR, travel and asset management, service desk, and custom business solutions. We help organisations improve information management and automate business processes.'}
   ];
   const launch = document.createElement('button');
   launch.type='button';launch.className='onn-chat-launch';launch.id='onnChatLaunch';
@@ -41,8 +42,9 @@
   function message(content,from='assistant'){const p=document.createElement('p');p.className='onn-chat-msg';p.dataset.from=from;p.textContent=content;log.appendChild(p);log.scrollTop=log.scrollHeight;}
   function choice(label,fn){const b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',fn);choices.append(b);}
   function home(){choices.replaceChildren();['SharePoint','Power Apps','Power Automate','EDRMS','HR solutions','AI solutions'].forEach(label=>choice(label,()=>reply(label)));choice('Request consultation',openLead);}
-  function reply(query){const q=query.trim().toLowerCase();if(!q)return;message(query,'visitor');const match=topics.find(t=>t.keys.some(k=>q.includes(k)));message(match?match.answer+' Would you like to discuss a solution?':'I can answer common questions about ONN Technologies services. For a specific proposal, choose “Request consultation” and tell us about your needs.');home();}
-  function setOpen(open){panel.dataset.open=String(open);launch.setAttribute('aria-expanded',String(open));launch.textContent=open?'Close chat':'Chat with ONN';if(open){$('onnChatQuestion').focus();}else{launch.focus();}}
+  function matchesKeyword(query,keyword){const escaped=keyword.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return new RegExp('(^|[^a-z0-9])'+escaped+'($|[^a-z0-9])','i').test(query);}
+  function reply(query){const q=query.trim().toLowerCase();if(!q)return;message(query,'visitor');const match=topics.find(t=>t.keys.some(k=>matchesKeyword(q,k)));message(match?match.answer+' Would you like to discuss a solution?':'I can answer common questions about ONN Technologies services. For a specific proposal, choose “Request consultation” and tell us about your needs.');home();}
+  function setOpen(open){panel.dataset.open=String(open);launch.setAttribute('aria-expanded',String(open));launch.setAttribute('aria-label',open?'Close ONN website assistant':'Open ONN website assistant');launch.textContent=open?'Close chat':'Chat with ONN';if(open){$('onnChatQuestion').focus();}else{launch.focus();}}
   function openLead(){lead.dataset.open='true';entry.hidden=true;choices.hidden=true;$('onnLeadFeedback').textContent='';$('onnLeadName').focus();}
   function closeLead(){lead.dataset.open='false';entry.hidden=false;choices.hidden=false;$('onnChatQuestion').focus();}
   launch.addEventListener('click',()=>setOpen(panel.dataset.open!=='true'));
@@ -67,3 +69,4 @@
   message('Hi! Welcome to ONN Technologies. I can help you explore our services and request a consultation. I am a guided website assistant, not a live AI agent.');
   home();
 })();
+
