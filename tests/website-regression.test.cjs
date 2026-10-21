@@ -41,6 +41,7 @@ test('existing contact form remains and chatbot consent stays mandatory', () => 
   assert.match(html, /id="email" name="email" required type="email"/);
   assert.match(html, /<option>Website Development<\/option>/);
   assert.match(html, /<option>E-commerce Website<\/option>/);
+  assert.match(html, /<option>Microsoft 365 consulting<\/option>/);
   assert.match(bot, /name="privacy_consent" type="checkbox"[^>]* required/);
   assert.match(bot, /if\(!lead\.reportValidity\(\)\|\|!\$\('onnLeadConsent'\)\.checked\)return/);
   assert.match(bot, /name="_honey"/);
