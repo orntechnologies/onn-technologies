@@ -54,6 +54,27 @@
     @media(max-width:1000px){.hero{grid-template-columns:1fr}.heroart{max-width:650px;margin:auto;width:100%}.sectionhead{grid-template-columns:1fr}.servicegrid{grid-template-columns:1fr 1fr}.productgrid{grid-template-columns:1fr 1fr}.whygrid,.contact{grid-template-columns:1fr}.trusted .wrap{grid-template-columns:1fr 1fr}.trusted p{grid-column:1/-1}.steps{grid-template-columns:1fr 1fr}}
     @media(max-width:720px){.topline{display:none}.nav{height:70px}.links{display:none;position:absolute;top:70px;left:0;right:0;padding:22px;background:#fff;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}.links.open{display:flex}.menubtn{display:block}.hero{padding:55px 0}.heroart{height:450px}.dash{width:100%}.floatcard{display:none}.actions{flex-direction:column}.microtrust{align-items:flex-start;gap:8px;flex-direction:column}.trusted .wrap,.servicegrid,.productgrid,.steps,.footergrid{grid-template-columns:1fr}.trusted b{border-left:0;border-top:1px solid rgba(255,255,255,.1)}.section{padding:78px 0}.contact form{grid-template-columns:1fr}.full{grid-column:auto}.copyright{gap:10px;flex-direction:column}.chatbutton span{display:none}}
    .brandmark{font-size:21px;font-weight:950;background:linear-gradient(140deg,#071f47 10%,#087cd8 62%,#ff6b00 100%);border-radius:11px}.hero .lead{line-height:1.75}.servicegrid{grid-template-columns:repeat(3,minmax(0,1fr))}.service h3{font-size:20px}.navcta,.primary{transition:transform .2s,box-shadow .2s}.navcta:hover{box-shadow:0 12px 30px rgba(6,21,45,.2)}@media(max-width:1000px){.servicegrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:720px){.servicegrid{grid-template-columns:1fr}}
+  
+    /* Visual polish: Microsoft-led blue palette with restrained orange actions. */
+    :root{--ink:#0b1f3a;--navy:#103b75;--blue:#146fe8;--sky:#44b8f3;--orange:#f26b38;--peach:#fff4ee;--mist:#f5f8fc;--line:#d9e4f2;--muted:#5d708b;--shadow:0 28px 80px rgba(11,31,58,.13)}
+    body{background:linear-gradient(180deg,#fff 0%,#fbfdff 38%,var(--mist) 100%)}
+    .topline{background:linear-gradient(90deg,#071a34,var(--ink));color:#d5e2f3}.topline b{color:#ff9b70}
+    .nav{background:rgba(255,255,255,.88);border-bottom-color:rgba(20,111,232,.14)}
+    .brandmark{box-shadow:0 12px 28px rgba(20,111,232,.22)}
+    .links a:hover{color:var(--blue)}
+    .navcta,.primary{background:linear-gradient(135deg,var(--navy),var(--blue));box-shadow:0 12px 24px rgba(20,111,232,.18)}
+    .navcta:hover,.primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(20,111,232,.27)}
+    .hero:before{background:radial-gradient(circle,rgba(68,184,243,.24),transparent 68%)}
+    .eyebrow,.label{color:var(--blue)}
+    .service,.product,.quote,.contact form{border-color:rgba(20,111,232,.13);box-shadow:0 18px 45px rgba(11,31,58,.06)}
+    .service:hover,.product:hover{border-color:rgba(20,111,232,.35);box-shadow:0 24px 55px rgba(20,111,232,.12);transform:translateY(-5px)}
+    .service-featured{background:linear-gradient(145deg,#fff,#f2f8ff)}
+    .service a,.product a{color:var(--blue)}
+    .trusted{background:linear-gradient(100deg,var(--navy),#1559a7);color:#e7f2ff}
+    .sectionhead h2 span,.hero h1 span{color:var(--blue)}
+    .contact{background:linear-gradient(135deg,#eef7ff 0%,#fff 60%)}
+    .status{background:#effaf6;border-color:#b7ead6}
+    @media(max-width:720px){.wrap{width:min(100% - 28px,1180px)}.hero{min-height:auto}}
   </style>
   <link rel="stylesheet" href="./chatbot.css">
 </head>
