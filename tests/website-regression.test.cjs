@@ -59,3 +59,10 @@ test('metadata and branded icons remain linked', () => {
     assert.ok(html.includes(asset), 'icon link ' + asset);
   }
 });
+
+test('brand artwork is included in both header and footer', () => {
+  assert.equal((html.match(/class="onn-logo-image"/g) || []).length, 2);
+  const logo = fs.readFileSync(path.join(root, 'onn-logo-brand.webp'));
+  assert.equal(logo.subarray(0, 4).toString(), 'RIFF');
+  assert.equal(logo.subarray(8, 12).toString(), 'WEBP');
+});
