@@ -24,12 +24,25 @@ test('social metadata selects a large, accessible PNG on the canonical origin', 
   assert.equal(meta('og:image:type'), 'image/png');
   assert.equal(meta('og:image:width'), '1200');
   assert.equal(meta('og:image:height'), '630');
-  for (const key of ['og:image:alt', 'twitter:image:alt', 'twitter:title']) {
+  for (const key of ['og:image:alt', 'twitter:image:alt']) {
     assert.match(meta(key), /ONN Technologies/);
-    assert.match(meta(key), /Software Development, AI &amp; Digital Transformation/);
+    assert.match(meta(key), /Microsoft-powered business solutions/);
+    assert.match(meta(key), /Custom software &amp; AI/);
+    assert.doesNotMatch(meta(key), /Software Development, AI &amp; Digital Transformation/);
     assert.doesNotMatch(meta(key), /ORN/);
   }
+  assert.equal(meta('og:image:alt'), meta('twitter:image:alt'));
+  const title = html.match(/<title>([^<]+)<\/title>/)[1];
+  assert.equal(meta('og:title'), title);
+  assert.equal(meta('twitter:title'), title);
+  assert.match(title, /Microsoft Business Solutions/);
   assert.equal(meta('twitter:description'), meta('og:description'));
+  assert.equal(meta('description'), meta('og:description'));
+  for (const term of ['Microsoft 365', 'SharePoint', 'Power Platform', 'Azure', 'EDRMS', 'custom software', 'AI', 'intelligent automation']) {
+    assert.ok(meta('og:description').includes(term), `description includes ${term}`);
+  }
+  const organization = JSON.parse(html.match(/<script type="application\/ld\+json">([^<]+)<\/script>/)[1]);
+  assert.equal(organization.description, meta('description'));
   const robots = fs.readFileSync(path.join(root, 'robots.txt'), 'utf8');
   assert.doesNotMatch(robots, /Disallow:\s*\/(?:\s|images)/i);
 });
