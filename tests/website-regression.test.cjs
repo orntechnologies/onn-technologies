@@ -34,7 +34,7 @@ test('contact form, analytics and lead conversion tracking are preserved', () =>
 });
 
 test('chatbot and its consent flow remain available', () => {
-  assert.match(html, /<link rel="stylesheet" href="\.\/chatbot\.css">/);
+  assert.match(html, /<link rel="stylesheet" href="\.\/chatbot\.css\?v=20261023-1">/);
   assert.match(html, /chatbot\.js\?v=20261021-3/);
   assert.match(bot, /Microsoft Solutions/);
   assert.match(bot, /'Microsoft solutions'/);
