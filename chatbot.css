@@ -1,5 +1,5 @@
 /* ONN public website assistant — isolated from private ONN AI */
-.onn-chat-launch{position:fixed;right:22px;bottom:22px;z-index:150;border:0;border-radius:999px;padding:14px 20px;background:linear-gradient(130deg,#ff6b00,#ff8b3d);color:#fff;font-weight:800;box-shadow:0 14px 40px #06152d44;cursor:pointer}
+.onn-chat-launch{position:fixed;right:22px;bottom:22px;z-index:150;border:0;border-radius:999px;padding:14px 20px;background:#c99270;color:#102039;font-weight:800;box-shadow:0 14px 40px #06152d44;cursor:pointer}
 .onn-chat-panel{position:fixed;right:22px;bottom:82px;z-index:150;display:none;flex-direction:column;width:min(390px,calc(100vw - 24px));height:min(590px,calc(100dvh - 110px));background:white;border:1px solid #dce5f0;border-radius:18px;box-shadow:0 25px 75px #06152d44;overflow:hidden;color:#06152d;font:14px/1.5 Inter,Segoe UI,Arial,sans-serif}
 .onn-chat-panel[data-open="true"]{display:flex}
 .onn-chat-header{display:flex;align-items:center;justify-content:space-between;background:#071f47;color:white;padding:14px 16px}
