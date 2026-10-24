@@ -66,3 +66,13 @@ test('brand artwork is included in both header and footer', () => {
   assert.equal(logo.subarray(0, 4).toString(), 'RIFF');
   assert.equal(logo.subarray(8, 12).toString(), 'WEBP');
 });
+
+test('enquiry explains third-party processing and links to the privacy notice', () => {
+  const form = html.match(/<form id="contactForm"[\s\S]*?<\/form>/)?.[0];
+  assert.ok(form, 'contact form exists');
+  assert.match(form, /processed through FormSubmit and emailed to our business inbox/);
+  assert.match(form, /<a href="privacy.html">privacy notice<\/a>/);
+  const privacy = fs.readFileSync(path.join(root, 'privacy.html'), 'utf8');
+  assert.match(privacy, /Privacy Notice/);
+  assert.match(privacy, /info@onntechnologies\.co\.za/);
+});
